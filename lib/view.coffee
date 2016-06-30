@@ -150,6 +150,7 @@ class View extends SelectListView
     selected = @getSelectedItem()
     projectPath = fs.normalize(selected)
     atom.open({pathsToOpen: [projectPath], newWindow: true})
+    @cancel()
 
   replace: ->
     selected = @getSelectedItem()
